@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Select4 = new ComboBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -35,18 +36,32 @@
             Math = new Label();
             Hystory = new Label();
             button1 = new Button();
+            textBox4 = new TextBox();
+            Select4 = new ComboBox();
             SuspendLayout();
+            // 
+            // Select4
+            // 
+            Select4.DropDownStyle = ComboBoxStyle.DropDownList;
+            Select4.Font = new Font("Segoe UI", 14F);
+            Select4.Items.AddRange(new object[] { "Англійська мова", "Біологія", "Фізика", "Хімія", "Географія" });
+            Select4.Location = new Point(12, 114);
+            Select4.Name = "Select4";
+            Select4.Size = new Size(170, 33);
+            Select4.TabIndex = 3;
+            Select4.SelectedIndexChanged += Select4_SelectedIndexChanged;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(180, 28);
+            textBox1.Location = new Point(236, 23);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(44, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(180, 57);
+            textBox2.Location = new Point(236, 54);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(44, 23);
             textBox2.TabIndex = 0;
@@ -54,7 +69,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(180, 86);
+            textBox3.Location = new Point(236, 83);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(44, 23);
             textBox3.TabIndex = 0;
@@ -115,11 +130,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(236, 114);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(45, 23);
+            textBox4.TabIndex = 4;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(319, 226);
+            Controls.Add(textBox4);
+            Controls.Add(Select4);
             Controls.Add(button1);
             Controls.Add(Hystory);
             Controls.Add(Math);
@@ -143,5 +168,7 @@
         private Label Math;
         private Label Hystory;
         private Button button1;
+        private ComboBox Select4;
+        private TextBox textBox4;
     }
 }
